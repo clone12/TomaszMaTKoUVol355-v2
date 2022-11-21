@@ -20,7 +20,7 @@ namespace TKOU.SimAI.Levels.Buildings
 
         #region Variables
 
-
+        Income income;
 
         #endregion
 
@@ -56,7 +56,7 @@ namespace TKOU.SimAI.Levels.Buildings
         private void Initialize(Building building)
         {
             Building = building;
-
+            income = new Income(10,5);
             transform.position = building.Tile.Position;
         }
 

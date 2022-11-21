@@ -23,7 +23,7 @@ public class EcomonyManager : MonoBehaviour
 
     private void Awake()
     {
-        income = (Income)GetComponent(typeof(Income));
+        //income = (Income)GetComponent(typeof(Income));
         cashText.text = income.Cash.ToString();
         plCtr = FindObjectOfType<PlayerController>();
     }
