@@ -41,12 +41,12 @@ namespace TKOU.SimAI.Player
 
         private bool isContextPressed = false;
 
-        private const float moveScale = 0.04f;
+        private const float moveScale = 0.2f;
         private const float zoomScale = 5f;
 
         private Dictionary<Type, Action<IAmEntity>> typeToSelectionHandlers;
 
-        private bool shouldUpdateEntityUnderCursor = false;
+        private bool shouldUpdateEntityUnderCursor = true;
 
         private BuildHandler buildHandler;
 
@@ -112,7 +112,7 @@ namespace TKOU.SimAI.Player
         public void Initialize(IAmCamera camera)
         {
             this.camera = camera;
-
+            
             uiBuildingController.buildSelectionTarget = buildHandler;
         }
 
@@ -151,7 +151,7 @@ namespace TKOU.SimAI.Player
 
                 underCursorEntity = body.GetComponentInChildren<IAmEntity>();
 
-                if (underCursorEntity != null)
+                if (underCursorEntity == null)
                 {
                     return;
                 }
