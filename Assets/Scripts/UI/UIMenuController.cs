@@ -115,6 +115,16 @@ namespace TKOU.SimAI.UI
         private void QuitButton_OnClick()
         {
             Application.Quit();
+            // Ta czesc wykonalem w pierwszej probie
+            // Bardzo ciezko jest mi rozszyfrowac cala strukture aplikacji, wszystkie podpunkty zadania 2 bylbym w stanie zrobic 
+            // na projekcie robionym od zera przeze mnie bo nie jest to specjalnie skomplikowane jednakze problemem jest dla mnie
+            // odnalezienie sie w tym wszystkim
+            
+            // Chcialbym podkreslic ze wszystkie braki jestem w stanie mozliwie szybko nadrobic 
+            // I wiem ze przy minimalnej pomocy ze zrozumieniem calej architektury dalbym rade wszystko zrobic
+            // Nie bede ukrywac ze pracujac dotychczas z Unity korzystalem z elementow ktore byly mi niezbedne do 
+            // wykonania danych zadan
+
         }
 
         private void PlayButton_OnClick()
