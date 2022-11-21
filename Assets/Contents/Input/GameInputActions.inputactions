@@ -11,7 +11,8 @@
                     "id": "c3a0332d-c448-42d2-8424-b67e57213d31",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MoveCamera",
@@ -19,7 +20,8 @@
                     "id": "34bf5df7-8cbe-44a3-bedf-b80f4859b59d",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "ZoomCamera",
@@ -27,7 +29,8 @@
                     "id": "17376096-1312-4989-95e2-0aabac2c3d71",
                     "expectedControlType": "Analog",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Select",
@@ -35,7 +38,8 @@
                     "id": "366ea1de-8a6a-49b7-b18e-fc64bbaaa7a0",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press(behavior=2)"
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Context",
@@ -43,7 +47,8 @@
                     "id": "d6817b7b-ad41-4469-9338-7454ebff7866",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press(behavior=2)"
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Return",
@@ -51,7 +56,17 @@
                     "id": "14c61820-8b69-46d9-9126-c9151781f1f8",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KeyboardInputArrows",
+                    "type": "Button",
+                    "id": "26293f4e-458f-4781-9bae-a4e07295032a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -118,6 +133,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "MoveMouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ceba575d-83f5-475e-8dcd-ed1ab43c2595",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyboardInputArrows",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "813b9ebf-4db3-4005-8059-ad4759d56c6b",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyboardInputArrows",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

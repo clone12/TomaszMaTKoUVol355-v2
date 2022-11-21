@@ -82,6 +82,15 @@ namespace TKOU.SimAI.Input
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyboardInputArrows"",
+                    ""type"": ""Button"",
+                    ""id"": ""26293f4e-458f-4781-9bae-a4e07295032a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -150,6 +159,28 @@ namespace TKOU.SimAI.Input
                     ""action"": ""MoveMouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ceba575d-83f5-475e-8dcd-ed1ab43c2595"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInputArrows"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""813b9ebf-4db3-4005-8059-ad4759d56c6b"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyboardInputArrows"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -164,6 +195,7 @@ namespace TKOU.SimAI.Input
             m_Main_Select = m_Main.FindAction("Select", throwIfNotFound: true);
             m_Main_Context = m_Main.FindAction("Context", throwIfNotFound: true);
             m_Main_Return = m_Main.FindAction("Return", throwIfNotFound: true);
+            m_Main_KeyboardInputArrows = m_Main.FindAction("KeyboardInputArrows", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -229,6 +261,7 @@ namespace TKOU.SimAI.Input
         private readonly InputAction m_Main_Select;
         private readonly InputAction m_Main_Context;
         private readonly InputAction m_Main_Return;
+        private readonly InputAction m_Main_KeyboardInputArrows;
         public struct MainActions
         {
             private @GameInputActions m_Wrapper;
@@ -239,6 +272,7 @@ namespace TKOU.SimAI.Input
             public InputAction @Select => m_Wrapper.m_Main_Select;
             public InputAction @Context => m_Wrapper.m_Main_Context;
             public InputAction @Return => m_Wrapper.m_Main_Return;
+            public InputAction @KeyboardInputArrows => m_Wrapper.m_Main_KeyboardInputArrows;
             public InputActionMap Get() { return m_Wrapper.m_Main; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -266,6 +300,9 @@ namespace TKOU.SimAI.Input
                     @Return.started -= m_Wrapper.m_MainActionsCallbackInterface.OnReturn;
                     @Return.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnReturn;
                     @Return.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnReturn;
+                    @KeyboardInputArrows.started -= m_Wrapper.m_MainActionsCallbackInterface.OnKeyboardInputArrows;
+                    @KeyboardInputArrows.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnKeyboardInputArrows;
+                    @KeyboardInputArrows.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnKeyboardInputArrows;
                 }
                 m_Wrapper.m_MainActionsCallbackInterface = instance;
                 if (instance != null)
@@ -288,6 +325,9 @@ namespace TKOU.SimAI.Input
                     @Return.started += instance.OnReturn;
                     @Return.performed += instance.OnReturn;
                     @Return.canceled += instance.OnReturn;
+                    @KeyboardInputArrows.started += instance.OnKeyboardInputArrows;
+                    @KeyboardInputArrows.performed += instance.OnKeyboardInputArrows;
+                    @KeyboardInputArrows.canceled += instance.OnKeyboardInputArrows;
                 }
             }
         }
@@ -300,6 +340,7 @@ namespace TKOU.SimAI.Input
             void OnSelect(InputAction.CallbackContext context);
             void OnContext(InputAction.CallbackContext context);
             void OnReturn(InputAction.CallbackContext context);
+            void OnKeyboardInputArrows(InputAction.CallbackContext context);
         }
     }
 }

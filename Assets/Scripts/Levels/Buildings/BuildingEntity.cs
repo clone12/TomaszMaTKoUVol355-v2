@@ -18,6 +18,12 @@ namespace TKOU.SimAI.Levels.Buildings
 
         #endregion Properties
 
+        #region Variables
+
+
+
+        #endregion
+
         #region Public methods
 
         public static BuildingEntity SpawnEntity(Building ownerBuilding)

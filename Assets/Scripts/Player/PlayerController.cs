@@ -25,6 +25,8 @@ namespace TKOU.SimAI.Player
 
         #region Variables
 
+        private int playerCash = 200;
+
         [SerializeField]
         private PlayerInput playerInput;
 
