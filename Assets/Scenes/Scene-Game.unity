@@ -334,6 +334,8 @@ MonoBehaviour:
   quitButton: {fileID: 187882497}
   mainMenuObject: {fileID: 455998091}
   autostart: 0
+  buttonList: []
+  selectedButton: 0
 --- !u!1001 &187882495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1196,7 +1198,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944210178}
-  m_LocalRotation: {x: 0.2798482, y: 0.3647052, z: -0.11591692, w: 0.88047624}
+  m_LocalRotation: {x: 0.27984816, y: 0.3647052, z: -0.1159169, w: 0.88047624}
   m_LocalPosition: {x: -200, y: 200, z: -200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1415,7 +1417,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405222026}
-  m_LocalRotation: {x: 0.2798482, y: 0.3647052, z: -0.11591692, w: 0.88047624}
+  m_LocalRotation: {x: 0.27984816, y: 0.3647052, z: -0.1159169, w: 0.88047624}
   m_LocalPosition: {x: -200, y: 200, z: -200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
