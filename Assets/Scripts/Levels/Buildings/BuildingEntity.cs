@@ -38,7 +38,9 @@ namespace TKOU.SimAI.Levels.Buildings
             }
 
             BuildingEntity buildingEntity = Instantiate(buildingData.BuildingEntityPrefab);
-
+            // Tutaj powinna znaleźć sie implementacja sumowania każdego postawionego budynku oraz przychodu. 
+            //Sumując po każdym utworzonym budynku i zysk 5 sekundowy i dodawać koszt danego budynku do wydanych pieniedzy
+            // ale przez brak wykonania wczesniejszego zadania do konca ciezko jest tutaj cos zrobic
             buildingEntity.Initialize(ownerBuilding);
 
             return buildingEntity;
