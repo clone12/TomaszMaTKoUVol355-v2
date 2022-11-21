@@ -18,6 +18,8 @@ namespace TKOU.SimAI
 
         #region Variables
 
+        private int cost;
+
         [SerializeField]
         private Button button;
 

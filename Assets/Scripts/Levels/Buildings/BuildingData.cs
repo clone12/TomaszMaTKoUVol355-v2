@@ -19,6 +19,14 @@ namespace TKOU.SimAI.Levels.Buildings
         }
 
         [field: SerializeField]
+        public int BuildingCost
+        {
+            get;
+            
+            private set;
+        }
+
+        [field: SerializeField]
         public string BuildingName
         {
             get;
@@ -30,6 +38,14 @@ namespace TKOU.SimAI.Levels.Buildings
         {
             get;
             private set;
+        }
+
+        int IAmData.DataCost
+        {
+            get
+            {
+                return BuildingCost;
+            }
         }
 
         Sprite IAmData.DataIcon

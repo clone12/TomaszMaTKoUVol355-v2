@@ -67,6 +67,7 @@ namespace TKOU.SimAI.UI
 
         private void Update()
         {
+            /*
             if (UnityEngine.Input.GetAxis("Vertical") > 0)
             {
                 MoveToNextButton();
@@ -79,7 +80,7 @@ namespace TKOU.SimAI.UI
             if (UnityEngine.Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 buttonList[selectedButton].action();
-            }
+            }*/
         }
 
         #endregion Unity methods

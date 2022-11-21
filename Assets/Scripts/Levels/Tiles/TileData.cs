@@ -18,6 +18,12 @@ namespace TKOU.SimAI.Levels.Tiles
             private set;
         }
 
+        public int TileCost
+        {
+            get;
+            private set;
+        }
+
         [field: SerializeField]
         public Sprite TileIcon
         {
@@ -45,6 +51,14 @@ namespace TKOU.SimAI.Levels.Tiles
             get
             {
                 return TileIcon;
+            }
+        }
+
+        int IAmData.DataCost
+        {
+            get
+            {
+                return TileCost;
             }
         }
 

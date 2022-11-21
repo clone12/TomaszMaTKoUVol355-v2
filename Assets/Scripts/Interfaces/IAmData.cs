@@ -17,6 +17,11 @@ namespace TKOU.SimAI.Interfaces
             get;
         }
 
+        public int DataCost
+        {
+            get;
+        }
+
         /// <summary>
         /// Name representing this data.
         /// </summary>
